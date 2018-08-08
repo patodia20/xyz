@@ -10,31 +10,31 @@ class Waterjug:
 
 
     def __init__(self,am,bm,a,b,g):
-        self.a_max = am;
-        self.b_max = bm;
-        self.a = a;
-        self.b = b;
-        self.goal = g;
+        self.a_max = am
+        self.b_max = bm
+        self.a = a
+        self.b = b
+        self.goal = g
 
 
     def fillA(self):
-        self.a = self.a_max;
-        print ('(', self.a, ',',self.b, ')')
+        self.a = self.a_max
+        #print ('(', self.a, ',',self.b, ')')
 
 
     def fillB(self):
-        self.b = self.b_max;
-        print ('(', self.a, ',', self.b, ')')
+        self.b = self.b_max
+        #print ('(', self.a, ',', self.b, ')')
 
 
     def emptyA(self):
-        self.a = 0;
+        self.a = 0
         print ('(', self.a, ',', self.b, ')')
 
 
     def emptyB(self):
-        self.b = 0;
-        print ('(', self.a, ',', self.b, ')')
+        self.b = 0
+        #print ('(', self.a, ',', self.b, ')')
 
 
     def transferAtoB(self):
@@ -43,7 +43,7 @@ class Waterjug:
             self.b = self.b + 1
             if (self.a == 0 or self.b == self.b_max):
                 break
-        print ('(', self.a, ',', self.b, ')')
+        #print ('(', self.a, ',', self.b, ')')
 
     def transferBtoA(self):
         while (True):
@@ -51,7 +51,7 @@ class Waterjug:
             self.a = self.a + 1
             if (self.b == 0 or self.a == self.a_max):
                 break
-        print ('(', self.a, ',', self.b, ')')
+        #print ('(', self.a, ',', self.b, ')')
 
     def graph(self):
        
@@ -64,7 +64,7 @@ class Waterjug:
                 states.append((self.a, self.b))
                 result=copy.deepcopy(states)
                 res.append(result)
-                print ('(', self.a, ',', self.b, ')')
+                #print ('(', self.a, ',', self.b, ')')
                 break 
             if (self.a == 0):
                 states.append((self.a, self.b))
@@ -95,12 +95,8 @@ if __name__ == "__main__":
     states=list()
     result=[]
     res= []
-   # waterjug=Waterjug(4,3,0,0,2)
-   # waterjug.graph()
-    for i in range(1,5):
-         for j in range(0,i): 
-            waterjug=Waterjug(4,3,i,j,2);
-            waterjug.graph()
+    waterjug=Waterjug(4,3,0,0,2)
+    waterjug.graph()
     for var in  range(len(res)) :
         print("{}Liters".format(res[var]))
         

@@ -10,30 +10,30 @@ class Waterjug:
 
 
     def __init__(self,am,bm,a,b,g):
-        self.a_max = am;
-        self.b_max = bm;
-        self.a = a;
-        self.b = b;
-        self.goal = g;
+        self.a_max = am
+        self.b_max = bm
+        self.a = a
+        self.b = b
+        self.goal = g
 
 
     def fillA(self):
-        self.a = self.a_max;
+        self.a = self.a_max
         print ('(', self.a, ',',self.b, ')')
 
 
     def fillB(self):
-        self.b = self.b_max;
+        self.b = self.b_max
         print ('(', self.a, ',', self.b, ')')
 
 
     def emptyA(self):
-        self.a = 0;
+        self.a = 0
         print ('(', self.a, ',', self.b, ')')
 
 
     def emptyB(self):
-        self.b = 0;
+        self.b = 0
         print ('(', self.a, ',', self.b, ')')
 
 
@@ -99,7 +99,7 @@ if __name__ == "__main__":
    # waterjug.graph()
     for i in range(1,5):
          for j in range(0,i): 
-            waterjug=Waterjug(4,3,i,j,2);
+            waterjug=Waterjug(4,3,i,j,2)
             waterjug.graph()
     for var in  range(len(res)) :
         print("{}Liters".format(res[var]))

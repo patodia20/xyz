@@ -36,7 +36,7 @@ class Waterjug:
         self.b = 0
         #print ('(', self.a, ',', self.b, ')')
 
-
+    # TODO Correct Algo..
     def transferAtoB(self):
         while (True):
             self.a = self.a - 1            
@@ -45,6 +45,7 @@ class Waterjug:
                 break
         #print ('(', self.a, ',', self.b, ')')
 
+    # TODO Correct Algo..
     def transferBtoA(self):
         while (True):
             self.b = self.b - 1            
@@ -87,9 +88,6 @@ class Waterjug:
                 elif (self.b > 0 and self.a != self.a_max):
                       states.append((self.a, self.b))
                       self.emptyA()
-                      
-                
-        
 
 if __name__ == "__main__":
     states=list()
@@ -99,6 +97,3 @@ if __name__ == "__main__":
     waterjug.graph()
     for var in  range(len(res)) :
         print("{}Liters".format(res[var]))
-        
-      
-    

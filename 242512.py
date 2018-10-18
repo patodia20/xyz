@@ -97,3 +97,7 @@ if __name__ == "__main__":
     waterjug.graph()
     for var in  range(len(res)) :
         print("{}Liters".format(res[var]))
+        
+        
+        
+        ## edit some changes 
